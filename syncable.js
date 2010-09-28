@@ -174,6 +174,7 @@ function Collection(name) {
     var action = (obj._action || "set")
     delete obj.action
 
+
     switch(action) {
       case "set":
         var id = (obj.id || console.error("Incorrect JSON received, missing 'id': " + payload))
