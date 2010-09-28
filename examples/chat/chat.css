@@ -1,19 +1,34 @@
 input {
   font-size: 20px;
-  width: 500px;
+  width: 650px;
   margin-bottom: 30px;
+}
+
+#user, #message {
+  display: inline-block;
+}
+
+#user {
+  width: 150px;
+}
+
+#message {
+  width: 645px;
 }
 
 #messages {
   font-size: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 650px;
 }
 
 #messages .user {
   display: inline-block;
-  width: 100px;
+  width: 150px;
 }
 
 #messages .message {
   display: inline-block;
-  width: 400px;
+  width: 500px;
 }

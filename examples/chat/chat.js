@@ -25,8 +25,11 @@ document.on("dom:loaded", function(){
 
 document.on("keydown", function(event) {
   if(event.keyCode == 13) {
+    var user = encodeURI($('user').value)
+    var message = encodeURI($('message').value)
+    var payload = "http://localhost:4567/asd?id="+Date.now()+"&user="+user+"&message="+message
     $$('body').first().insert({
-      top: "<img style='display:none' src='http://localhost:4567/asd?id=" + Date.now() + "&user=pablo&message=" + $('message').value + "'/>"
+      top: "<img style='display:none' src='"+payload+"'/>"
     })
     $('message').value = ""
   }
