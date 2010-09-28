@@ -1,0 +1,19 @@
+input {
+  font-size: 20px;
+  width: 500px;
+  margin-bottom: 30px;
+}
+
+#messages {
+  font-size: 20px;
+}
+
+#messages .user {
+  display: inline-block;
+  width: 100px;
+}
+
+#messages .message {
+  display: inline-block;
+  width: 400px;
+}
