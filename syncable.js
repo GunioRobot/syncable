@@ -21,13 +21,22 @@ function Collection(name) {
   }
   // Removes the element _id_ from the collection and the DOM
   this.unset = function(id) {
+    item = this.get(id)
+    this.afterUnsetCallbacks.each(function(f) { f(id,item) })
     this.removeElementIfExists(id)
     return this.items.unset(id)
   }
-  // Stuff to run after setting an object (new or existing)
+  // Callbacks: Stuff to run after setting an object (new or existing)
+  // They are run after the element has been added to the UI
   this.afterSetCallbacks = []
   this.afterSet = function(f) {
     this.afterSetCallbacks.push(f)
+  }
+  // Callbacks: Stuff to run after unsetting an object (deleting it)
+  // They are run before the element is deleted from the UI
+  this.afterUnsetCallbacks = []
+  this.afterUnset = function(f) {
+    this.afterUnsetCallbacks.push(f)
   }
 
   // VIEW -------------------------------------------------------------------
@@ -84,5 +93,4 @@ function Collection(name) {
         console.log("Unknown action passed: " + payload)
     }
   }
-  
 }
