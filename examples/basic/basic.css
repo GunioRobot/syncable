@@ -10,7 +10,6 @@
   height: 18px;
   padding: 5px 10px; }
   .emails_item:hover {
-    cursor: pointer;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fbfa), to(#c6c8c7));
     background-image: -moz-linear-gradient(#f9fbfa, #c6c8c7); }
 

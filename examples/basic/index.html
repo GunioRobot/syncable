@@ -10,6 +10,11 @@
 <body>
   <h1>Basic commands: Demo with email</h1>
   <p>This page emulates an email client built using syncable collections.</p>
+  <p>
+    "Check new email" adds an element to the collection (<b>set</b> method for a new id).
+    "Mark as read/unread" updates an existing element (<b>set</b> method for an existing id).
+    "Delete" removes the element from the collection (<b>unset</b> method).
+  </p>
   <a href="#" class="button new_email">Check new email</a>
   <div class="pane">
     <div id="emails"></div>
