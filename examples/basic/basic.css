@@ -1,0 +1,66 @@
+#emails {
+  border-top: 1px solid #777777;
+  border-right: 1px solid #777777; }
+
+.emails_item {
+  border-left: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fbfa), to(#d7d9d8));
+  background-image: -moz-linear-gradient(#f9fbfa, #d7d9d8);
+  height: 18px;
+  padding: 5px 10px; }
+  .emails_item:hover {
+    cursor: pointer;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f9fbfa), to(#c6c8c7));
+    background-image: -moz-linear-gradient(#f9fbfa, #c6c8c7); }
+
+.emails_item.active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3477ec), to(#0144b9));
+  background-image: -moz-linear-gradient(#3477ec, #0144b9); }
+  .emails_item.active .title, .emails_item.active .people, .emails_item.active .text {
+    color: white; }
+
+.emails_item span.from {
+  display: inline-block;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.emails_item.unread {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FCF8AD), to(#FCF8AD));
+  background-image: -moz-linear-gradient(#f9fbfa, #d7d9d8);
+}
+
+.emails_item.read a.read, .emails_item.unread a.unread {
+  display: none; }
+
+.emails_item a.button {
+  float: right;
+  margin: 0 5px;
+  padding: 1px 4px;
+}
+
+a.button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 10 5px;
+  color: #0a0a0a;
+  background: #eeeeee;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(192, 192, 192, 0)), to(silver));
+  background-image: -moz-linear-gradient(rgba(192, 192, 192, 0), silver);
+  text-shadow: white 1px 1px 1px;
+  border: 1px solid #999999;
+  cursor: pointer;
+  text-decoration: none; }
+  a.button:hover {
+    text-decoration: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(170, 170, 170, 0)), to(#aaaaaa));
+    background-image: -moz-linear-gradient(rgba(170, 170, 170, 0), #aaaaaa); }
+  a.button:active {
+    background: #cccccc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#888888), to(rgba(136, 136, 136, 0)));
+    background-image: -moz-linear-gradient(#888888, rgba(136, 136, 136, 0)); }
