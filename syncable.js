@@ -133,7 +133,7 @@ function Collection(name) {
   // Renders all the elements in the collection to the container
   this.renderAll = function() {
     var html = ""
-    var keys = this.items.keys()
+    var keys = this.items.keys().sort()
     for(var i=0; i < keys.length; i++)
       html += this.itemToHtml(keys[i])
     this.container.insert({ top: html })
@@ -173,7 +173,6 @@ function Collection(name) {
     // We get the action, which defaults to "set"
     var action = (obj._action || "set")
     delete obj.action
-
 
     switch(action) {
       case "set":
