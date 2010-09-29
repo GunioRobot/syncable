@@ -3,18 +3,24 @@
   <script src="../../dependencies/prototype.js" type="text/javascript"></script>
   <script src="../../dependencies/mustache.js" type="text/javascript"></script>
   <script src="../../syncable.js" type="text/javascript"></script>
-  <script src="http://js.pusherapp.com/1.5/pusher.min.js"></script>
-  <script src="http://localhost:4567/echo.js"></script>
+  <script src="http://js.pusherapp.com/1.6/pusher.min.js"></script>
   <script src="chat.js" type="text/javascript"></script>
   <link href="../common.css" rel="stylesheet" type="text/css" />
   <link href="chat.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <h1>Chat</h1>
+  <p>Simple chat using Syncable and Pusherapp for notifications</p>
+  <p>Any message you send will be broadcasted to all users on this page, through json-pusher.heroku.com.</p>
+  <p>
+    (You can run your own broadcasting server with
+    <a href="http://github.com/micho/json-pusher">JSON-Pusher</a>)
+  </p>
   <div id="new_message">
     <input id="user" type="text" value="user"/>
     <input id="message" type="text"/>
   </div>
   <div id="messages"></div>
+  <script src="http://json-pusher.heroku.com/asd/last_messages.js"></script>
 </body>
 </html>
