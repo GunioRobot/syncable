@@ -1,0 +1,23 @@
+.leftpanel {
+  position: fixed;
+  right: 0;
+  padding-right: 20px;
+  width: 400px;
+}
+
+.leftpanel h2 {
+  font-size: 16px;
+}
+
+.leftpanel #tweets {
+  font-family: Courier;
+}
+
+.leftpanel #tweets .tweets_item {
+  margin: 10px 0;
+}
+
+.leftpanel p {
+  margin-top: 30px;
+  color: #aaa;
+}

@@ -1,0 +1,22 @@
+.pane {
+  display: inline-block;
+  width: 350px;
+  font-size: 16px;
+  font-family: Courier;
+  background-color: #f5f5f5;
+  padding: 5px 25px
+}
+
+.tweets_item {
+  margin: 10px 0;
+}
+
+.tweets_item span.user {
+  display: inline-block;
+  width: 100px;
+}
+
+.tweets_item span.body {
+  display: inline-block;
+  width: 250px;
+}

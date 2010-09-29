@@ -1,0 +1,38 @@
+<html>
+<head>
+  <script src="../../dependencies/prototype.js" type="text/javascript"></script>
+  <script src="../../dependencies/mustache.js" type="text/javascript"></script>
+  <script src="../../syncable.js" type="text/javascript"></script>
+  <script src="test.js" type="text/javascript"></script>
+  <link href="../common.css" rel="stylesheet" type="text/css" /> 
+  <link href="test.css" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+  <h1>Testing syncable collections</h1>
+  <p>This page tests the functions that manipulate collections.</p>
+  <p>If all tests run correctly, you should see the same content on both panes and no errors on the console.</p>
+  <div class="pane">
+    <div id="tweets"></div>
+  </div>
+  <div class="pane">
+    <div id="static_tweets">
+      <div class="tweets_item" id="static_tweets_12">
+        <span class="user">doce:</span><span class="body">12</span>
+      </div>
+      <div class="tweets_item" id="static_tweets_100">
+        <span class="user">JSON:</span><span class="body">OH</span>
+      </div>
+      <div class="tweets_item" id="static_tweets_9">
+        <span class="user">nueve:</span><span class="body">que llueve, que llueve</span>
+      </div>
+      <div class="tweets_item" id="static_tweets_8">
+        <span class="user">ocho:</span><span class="body">bizcocho</span>
+      </div>
+      <div class="tweets_item" id="static_tweets_6">
+        <span class="user">pablo:</span><span class="body">hola</span>
+      </div>
+    </div>
+  </div>
+  <p>For proper testing: We're using callbacks that use console.log, which only works with Webkit or Firebug. You need to open firebug to make it work on Firefox.</p>
+</body>
+</html>
