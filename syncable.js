@@ -57,8 +57,12 @@ function Collection(name) {
    *  Use get(), set() and unset() to interface with the Collection,
    *  and use the following methods internally:
    *  - this.items.get(id) to find item
-   *  - this.items.set(id) to add/update item
+   *  - this.items.set(id, {name:"pablo"}) to add/update item
    *  - this.items.unset(id) to remove item
+   *
+   *  There are two special attributes for each model:
+   *  - id: will be used to build the item's id and data-id attributes on the HTML
+   *  - class: will be used to build the class name on the HTML
   **/
 
   this.items = new Hash({})
@@ -117,6 +121,7 @@ function Collection(name) {
     if(item) {
       var dom_id = this.name + "_" + id
       var dom_class = this.name + "_item"
+      if(item.class) dom_class += " "+item.class
       return "<div class='"+dom_class+"' id='"+dom_id+"' data-id='"+id+"'>" +
                 Mustache.to_html(this.template, item) +
              "</div>"
