@@ -1,5 +1,5 @@
 const X_OFFSET = 150
-const Y_OFFSET = 250
+const Y_OFFSET = 280
 
 document.on("dom:loaded", function() {
 
