@@ -16,6 +16,8 @@ Using Syncable
 You just need to include the prototype, mustache and syncable js files into your HTML.
 To learn more, it's better to take a look at the examples in the _examples_ folder.
 
+The documentation can be found inside syncable.js, just open the file and read the comments.
+
 
 Contributing
 ---------------
