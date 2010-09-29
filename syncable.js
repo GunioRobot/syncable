@@ -117,7 +117,7 @@ function Collection(name) {
     if(item) {
       var dom_id = this.name + "_" + id
       var dom_class = this.name + "_item"
-      return "<div class='" + dom_class + "' id='" + dom_id + "'>" +
+      return "<div class='"+dom_class+"' id='"+dom_id+"' data-id='"+id+"'>" +
                 Mustache.to_html(this.template, item) +
              "</div>"
     }
