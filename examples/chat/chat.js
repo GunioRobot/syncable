@@ -8,7 +8,7 @@ WEB_SOCKET_DEBUG = true;
 
 var pusher = new Pusher('c4d8da3b6c36091f0ac4');
 pusher.subscribe('test_channel');
-pusher.bind('my_event', function(data) {
+pusher.bind('syncable', function(data) {
   string = JSON.stringify(data)
   console.log(string)
   messages.updateFromJSON(string)
