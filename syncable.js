@@ -87,6 +87,16 @@ function Collection(name) {
     this.removeElementIfExists(id)
     return this.items.unset(id)
   }
+  
+  // Updates an attribute atomically. Doesn't use the callbacks.
+  this.setAttribute = function(id, attr, value) {
+    var item = this.get(id)
+    if(item[attr] != value) {
+      item[attr] = value
+      $(this.name+"_"+id).replace(this.itemToHtml(id))
+    }
+    return item
+  }
 
   // Callback: Stuff to run after setting an object (new or existing)
   // They are run after the element has been added to the UI

@@ -24,6 +24,8 @@ document.on("dom:loaded", function() {
   tweets.updateFromJSON('{"_action":"js","js":"var t=1"}')                    // execute js
   tweets.unset(5) // remove existing item
 
+  tweets.setAttribute(9, "body", "LLUEVE")
+
   // Tests for callbacks
   log_id = function(id,data) { console.log("Id: " + id ) }
   log_data = function(id,data) { console.log("Data: " + data) }
