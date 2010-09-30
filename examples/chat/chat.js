@@ -7,7 +7,7 @@ Pusher.log = function() {
 WEB_SOCKET_DEBUG = true;
 
 var pusher = new Pusher('c4d8da3b6c36091f0ac4');
-pusher.subscribe('test_channel');
+pusher.subscribe('chat_example');
 pusher.bind('syncable', function(data) {
   string = JSON.stringify(data)
   console.log(string)
@@ -18,7 +18,7 @@ pusher.bind('syncable', function(data) {
 sendMessage = function(id, user, message) {
   var user_enc = encodeURI(user)
   var message_enc = encodeURI(message)
-  var payload = "http://json-pusher.heroku.com/asd?id="+id+"&user="+user_enc+"&message="+message_enc
+  var payload = "http://json-pusher.heroku.com/chat_example?id="+id+"&user="+user_enc+"&message="+message_enc
 
   // Add your message to the local collection
   messages.set(id, {user: user, message: message})
