@@ -45,7 +45,7 @@
  *
 **/
 
-function Collection(name) {
+var Collection = function (name) {
 
   this.name = name
 

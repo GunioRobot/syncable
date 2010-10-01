@@ -40,11 +40,12 @@ document.on("click", "a.unread", function(e,link){
 
 })
 
-random = function(array) {
-  return array[parseInt(Math.random() * array.length)]
-}
-
 document.on("click", "a.new_email", function(e,link){
+
+  var random = function(array) {
+    return array[parseInt(Math.random() * array.length)]
+  }
+
   var from  = random(["Jane","Kathy","Laura","Jessica","Sarah","Jennifer"]) +
               random([0,1,2,3,4,5,6,7,8,9,'_'])
   var title = random(["free","new","please","hi!"]) + " " +

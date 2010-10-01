@@ -27,9 +27,9 @@ document.on("dom:loaded", function() {
   tweets.setAttribute(9, "body", "LLUEVE")
 
   // Tests for callbacks
-  log_id = function(id,data) { console.log("Id: " + id ) }
-  log_data = function(id,data) { console.log("Data: " + data) }
-  log_delete = function(id,item) { console.log("Item " + id + " has been deleted: " + item) }
+  var log_id = function(id,data) { console.log("Id: " + id ) }
+  var log_data = function(id,data) { console.log("Data: " + data) }
+  var log_delete = function(id,item) { console.log("Item " + id + " has been deleted: " + item) }
 
   tweets.afterSet(log_id)
   tweets.afterSet(log_data)
@@ -38,5 +38,7 @@ document.on("dom:loaded", function() {
   tweets.set(11, { user: "once", body: "once"})
   tweets.unset(11)
   tweets.set(12, { user: "doce", body: "12"})
+  tweets.template = "<span class='user'>{{user}}:</span><span class='body'>{{body}} {{initial}}</span>"
+  tweets.set(13, { user: "Bond", body: "my name is...", initial: function() { return this.user[0,0] }})
 
 })
