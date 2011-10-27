@@ -4,7 +4,7 @@
  *
  *  This library allows you to sync collections of items with data on the HTML UI.
  *  It does so by storing each item in JSON, and providing methods to update the elements.
- *  
+ *
  *  Each collection is linked to an HTML element with a given ID, which is auto-detected.
  *  Whenever you add, replace or delete elements, the DOM will be updated automagically.
  *
@@ -14,30 +14,30 @@
  *  ##### Example
  *
  *      <div id="tweets"></div>
- *      
+ *
  *      <script type="text/javascript">
  *        // We create a collection of tweets, that links itself to the #tweets div.
  *        tweets = new Collection('tweets')
- *        
+ *
  *        // We assign a Mustache template to be rendered
  *        tweets.template = "<p>{{user}}: {{body}}</p>"
- *        
+ *
  *        // We load some initial items
  *        tweets.items = new Hash({
  *          6: { user: "pablo", body: "hola"},
  *          5: { user: "jordi", body: "ugh"}
  *        })
- *        
+ *
  *        // Now we render them to the page. The UI will now have the rendered elements
  *        tweets.renderAll()
  *
  *        // We can manipulate them at any moment with JS functions. The UI will update.
  *        tweets.set(7,{ user: "xurde", body: "a ver"}) // add item
  *        tweets.unset(5) // remove existing item
- *        
+ *
  *        // If we get JSON payloads from any channel, we can process those safely
  *        tweets.updateFromJSON('{"id":99,"body":"shouldnt see this","user":"you"}')  // add
- *        tweets.updateFromJSON('{"id":99,"_action":"unset"}')                        // remove 
+ *        tweets.updateFromJSON('{"id":99,"_action":"unset"}')                        // remove
  *        tweets.updateFromJSON('{"id":100,"body":"OH","user":"json"}')               // add
  *
  *        // You can also execute arbitrary JS on the client, receiving it from a channel
@@ -87,7 +87,7 @@ function Collection(name) {
     this.removeElementIfExists(id)
     return this.items.unset(id)
   }
-  
+
   // Updates an attribute atomically. Doesn't use the callbacks.
   this.setAttribute = function(id, attr, value) {
     var item = this.get(id)
@@ -140,7 +140,7 @@ function Collection(name) {
 
   /**
    *  Controller
-   *  
+   *
    *  The collection interfaces with the DOM by rendering and updating elements
    *
   **/
@@ -154,13 +154,13 @@ function Collection(name) {
     this.container.insert({ top: html })
     return html
   }
-  
+
   // Removes an element only from the UI (doesn't affect the model)
   this.removeElementIfExists = function(id) {
     var el = $(this.name + "_" + id)
     if(el) return el.remove()
   }
-  
+
   // Renders an item on the top of the container
   this.renderItem = function(id) {
     var html = this.itemToHtml(id)
@@ -172,7 +172,7 @@ function Collection(name) {
   /**
    *  You can update the collection using JSON payloads, by calling updateFromJSON(payload)
    *  This is for use with push notifications, or polling.
-   * 
+   *
    *  The default action is _set_. To delete elements, use the _unset_ action as in the example.
    *  You can also execute javascript on the client. Useful for custom behaviour.
    *  id and _action are special parameters, and don't get read as part of the item's data.

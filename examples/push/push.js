@@ -12,7 +12,7 @@ pusher.bind('my_event', function(data) {
   string = JSON.stringify(data)
   console.log(string)
   users.updateFromJSON(string)
-  
+
 });
 
 document.on("dom:loaded", function(){

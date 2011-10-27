@@ -6,7 +6,7 @@ document.on("dom:loaded", function() {
   dots = new Collection("dots")
   dots.template = "<span style='top: {{y}}px; left: {{x}}px'>O</div>"
 
-  new PeriodicalExecuter(function(i){ 
+  new PeriodicalExecuter(function(i){
     angle = Date.now() / 1000
     dots.set(1, {
       x: Math.sin(angle) * 100 + X_OFFSET,

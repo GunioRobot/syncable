@@ -2,17 +2,17 @@
 // Pusher.log = function() {
 //   if (window.console) window.console.log.apply(window.console, arguments);
 // };
-// 
+//
 // // Flash fallback logging - don't include this in production
 // WEB_SOCKET_DEBUG = true;
-// 
+//
 // var pusher = new Pusher('c4d8da3b6c36091f0ac4');
 // pusher.subscribe('test_channel');
 // pusher.bind('my_event', function(data) {
 //   string = JSON.stringify(data)
 //   console.log(string)
 //   users.updateFromJSON(string)
-//   
+//
 // });
 
 document.on("dom:loaded", function(){
@@ -63,7 +63,7 @@ document.on("keydown", function(event){
     players.set(++activePlayer, {x: 50, y: 50})
     Event.stop(event)
   }
-  
+
 })
 
 document.on("keyup", function(event){

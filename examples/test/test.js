@@ -17,7 +17,7 @@ document.on("dom:loaded", function() {
   tweets.set(8,{ user: "ocho", body: "bizcocho"}) // replace item
   tweets.set(9,{ user: "nueve", body: "que llueve, que llueve"}) // one more
   tweets.updateFromJSON('{"id":99,"body":"shouldnt see this","user":"you"}')  // add
-  tweets.updateFromJSON('{"id":99,"_action":"unset"}')                        // remove 
+  tweets.updateFromJSON('{"id":99,"_action":"unset"}')                        // remove
   tweets.updateFromJSON('{"id":100,"_action":"unset"}')                       // delete unexisting
   tweets.updateFromJSON('{"id":100,"body":"OH","user":"json"}')               // add
   tweets.updateFromJSON('{"id":100,"body":"OH","user":"JSON"}')               // replace previous

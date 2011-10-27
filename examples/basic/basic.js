@@ -1,5 +1,5 @@
 document.on("dom:loaded", function() {
-  
+
   emails = new Collection("emails")
   emails.template =
     "<span class='from'>{{from}}</span>" +

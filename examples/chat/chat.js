@@ -12,7 +12,7 @@ pusher.bind('syncable', function(data) {
   string = JSON.stringify(data)
   console.log(string)
   messages.updateFromJSON(string)
-  
+
 });
 
 sendMessage = function(id, user, message) {
